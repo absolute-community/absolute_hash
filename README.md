@@ -1,7 +1,7 @@
-dash_hash (python) v1.3.1
+absolute_hash (python) v1.3.1
 ===========================
 
-Python module for Dash's X11 hashing.
+Python module for Absolutes's LyraRE hashing.
 
 
 Install
@@ -26,3 +26,4 @@ Credits
 * Module maintained by @eduffield https://github.com/darkcoinproject/xcoin-hash
 * Module maintained by @flare https://github.com/nightlydarkcoin/xcoin-hash
 * Module maintained by @vertoe https://github.com/vertoe/darkcoin_hash
+* Module maintained by @UdjinM6 https://github.com/dashpay/dash_hash
