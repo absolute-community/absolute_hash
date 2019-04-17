@@ -1,6 +1,7 @@
 from distutils.core import setup, Extension
 absolute_hash_module = Extension('absolute_hash',
                                  sources = ['absolutemodule.c',
+                                            'absolute.c',
                                             'sha3/Lyra2RE.c',
                                             'sha3/Lyra2.c',
                                             'sha3/Sponge.c',
