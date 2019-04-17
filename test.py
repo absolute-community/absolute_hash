@@ -1,38 +1,38 @@
-import dash_hash
+import absolute_hash
 from binascii import unhexlify, hexlify
 
 import unittest
 
-# dash block #1
-# moo@b1:~/.dash$ dashd getblockhash 1
-# 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
-# moo@b1:~/.dash$ dashd getblock 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
+# absolute block #1
+# moo@b1:~/.absoluted$ absoluted getblockhash 1
+# 000009c40d088ddf1e84187210dc00af1c068e0511e13d9746e679785d1d213b
+# moo@b1:~/.dabsoluted$ absoluted getblock 000009c40d088ddf1e84187210dc00af1c068e0511e13d9746e679785d1d213b
 # {
-#     "hash" : "000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343",
-#     "confirmations" : 169888,
-#     "size" : 186,
+#     "hash" : "000009c40d088ddf1e84187210dc00af1c068e0511e13d9746e679785d1d213b",
+#     "confirmations" : 387898,
+#     "size" : 179,
 #     "height" : 1,
-#     "version" : 2,
-#     "merkleroot" : "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7",
+#     "version" : 536870912,
+#     "merkleroot" : "50e40fb40039d0057f48f0a22d120ea2ea5d4bc2f625beebc8238b78446eeb92",
 #     "tx" : [
-#         "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7"
+#         "50e40fb40039d0057f48f0a22d120ea2ea5d4bc2f625beebc8238b78446eeb92"
 #     ],
-#     "time" : 1390103681,
-#     "nonce" : 128987,
+#     "time" : 1518599488,
+#     "nonce" : 2009786,
 #     "bits" : "1e0ffff0",
-#     "difficulty" : 0.00024414,
-#     "previousblockhash" : "00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6",
-#     "nextblockhash" : "00000bafcc571ece7c5c436f887547ef41b574e10ef7cc6937873a74ef1efeae"
+#     "difficulty" : 0.000244140625,
+#     "previousblockhash" : "00000de52875a68d7bf6a5bb5ad1b89fd7df4d67a9603669327949923dc74d7e",
+#     "nextblockhash" : "00000e3f18b2b2256661b497e9b47e3816f5f7ab0fb9c2386b10ffe42eaa5cb2"
 # }
 
-header_hex = ("02000000" +
-    "b67a40f3cd5804437a108f105533739c37e6229bc1adcab385140b59fd0f0000" +
-    "a71c1aade44bf8425bec0deb611c20b16da3442818ef20489ca1e2512be43eef"
-    "814cdb52" +
-    "f0ff0f1e" +
-    "dbf70100")
+header_hex = ("02000000" + # reverse-hex version
+    "7e4dc73d92497932693660a9674ddfd79fb8d15abba5f67b8da67528e50d0000" + # reverse-hex previous blockhash
+    "92eb6e44788b23c8ebbe25f6c24b5deaa20e122da2f0487f05d03900b40fe450" + # reverse-hex merkleroot
+    "40fd835a" + # reverse-hex time
+    "f0ff0f1e" + # reverse-hex bits
+    "00baaa1e") # reverse-hex nonce
 
-best_hash = '434341c0ecf9a2b4eec2644cfadf4d0a07830358aed12d0ed654121dd9070000'
+best_hash = 'b312d1d587976e6479d31e1150e860c1fa00cd01278148e1fdd880d04c900000'
 
 class TestSequenceFunctions(unittest.TestCase):
 
