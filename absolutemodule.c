@@ -46,7 +46,7 @@ static struct PyModuleDef AbsoluteModule = {
 };
 
 PyMODINIT_FUNC PyInit_absolute_hash(void) {
-    return PyModule_Create(&AbsolutehModule);
+    return PyModule_Create(&AbsoluteModule);
 }
 
 #else
