@@ -283,3 +283,4 @@ void sph_cubehash512_addbits_and_close(
 	void *cc, unsigned ub, unsigned n, void *dst);
 
 #endif
+

@@ -715,3 +715,4 @@ sph_cubehash512_addbits_and_close(void *cc, unsigned ub, unsigned n, void *dst)
 	cubehash_close(cc, ub, n, dst, 16);
 	sph_cubehash512_init(cc);
 }
+

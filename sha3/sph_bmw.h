@@ -318,3 +318,4 @@ void sph_bmw512_addbits_and_close(
 #endif
 
 #endif
+
